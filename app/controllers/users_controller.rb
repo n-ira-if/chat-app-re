@@ -8,7 +8,6 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       render :edit, status: :unprocessable_entity
-    
   end
 
   private
@@ -16,4 +15,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email)
   end
+end
 end
